@@ -8,7 +8,7 @@ For architecture, data models, and API reference, see [`docs/design.md`](../docs
 
 ---
 
-## Phase 0 — Account Setup (Manual, One-Time)
+## Phase 0 — Account Setup (Manual, One-Time) ✅ COMPLETE
 
 These steps must be completed before any code can be run.
 
@@ -27,7 +27,7 @@ These steps must be completed before any code can be run.
 
 ---
 
-## Phase 1 — Project Bootstrap
+## Phase 1 — Project Bootstrap ✅ COMPLETE
 
 **Goal:** Runnable FastAPI app with database setup and health endpoint.
 
@@ -85,7 +85,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## Phase 2 — Snaptrade Integration
+## Phase 2 — Snaptrade Integration ✅ COMPLETE
 
 **Goal:** Register users, generate Robinhood OAuth URLs, retrieve holdings.
 
@@ -141,7 +141,7 @@ curl "http://localhost:8000/snaptrade/holdings/<account_id>?user_id=vipin"
 
 ---
 
-## Phase 3 — Alpaca Paper Trading Integration
+## Phase 3 — Alpaca Paper Trading Integration ✅ COMPLETE
 
 **Goal:** View paper account, place paper trades, manage positions.
 
@@ -190,7 +190,7 @@ curl http://localhost:8000/alpaca/positions
 
 ---
 
-## Phase 4 — Mirror & Compare Workflow
+## Phase 4 — Mirror & Compare Workflow ✅ COMPLETE
 
 **Goal:** Mirror Robinhood holdings into Alpaca paper and compare both portfolios.
 
@@ -243,17 +243,17 @@ curl "http://localhost:8000/portfolio/compare?user_id=vipin&account_id=<account_
 - [ ] Validate that `qty > 0` and `limit_price > 0` (when required) in Pydantic schemas
 - [ ] Handle Alpaca API errors (insufficient buying power, market closed, invalid symbol) gracefully
 - [ ] Handle Snaptrade errors (user not found, account not connected) gracefully
-- [ ] Add `.gitignore` (exclude `.env`, `*.db`, `__pycache__`, `.venv`)
+- [x] Add `.gitignore` (exclude `.env`, `*.db`, `__pycache__`, `.venv`)
 
 ---
 
 ## Implementation Order Summary
 
-| Phase | What Gets Built | Testable Output |
-|-------|----------------|-----------------|
-| 0 | Accounts created | API keys in hand |
-| 1 | FastAPI skeleton + DB | `/health` returns 200 |
-| 2 | Snaptrade integration | Robinhood holdings visible via API |
-| 3 | Alpaca integration | Paper trades placed and visible in Alpaca dashboard |
-| 4 | Mirror + compare | Full workflow end-to-end |
-| 5 | Polish | Clean errors, logs, validation |
+| Phase | What Gets Built | Testable Output | Status |
+|-------|----------------|-----------------|--------|
+| 0 | Accounts created | API keys in hand | ✅ Complete |
+| 1 | FastAPI skeleton + DB | `/health` returns 200 | ✅ Complete |
+| 2 | Snaptrade integration | Robinhood holdings visible via API | ✅ Complete |
+| 3 | Alpaca integration | Paper trades placed and visible in Alpaca dashboard | ✅ Complete |
+| 4 | Mirror + compare | Full workflow end-to-end | ✅ Complete |
+| 5 | Polish | Clean errors, logs, validation | 🔲 Not started |
