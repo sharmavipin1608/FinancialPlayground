@@ -5,3 +5,5 @@ alpaca-py
 sqlalchemy
 pydantic-settings
 python-dotenv
+httpx
+pytest
