@@ -17,6 +17,12 @@ No real API keys are needed to run tests — all external SDK calls are mocked. 
 
 ---
 
+## Workflow rules
+
+- **Mark phases complete after implementation.** Whenever a phase is implemented (code written + tests passing), update `implementationplan.md` to mark that phase as complete before considering the work done.
+
+---
+
 ## Architecture decisions
 
 - **Paper trading only.** All Alpaca interactions use `paper=True`. Never switch to live keys.
